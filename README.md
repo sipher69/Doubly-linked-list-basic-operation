@@ -6,14 +6,18 @@ doubly-linked list Write a menu-driven program to do the following operation in 
 3. Search: returns true if the node is present in the linked list and false otherwise.
 4. Display: to display all elements of a linked list
 */
-package javaapplication41;
-import java.util.Scanner;
 
-public class DoublyLinkedList {  
-    class Node{  
+       package javaapplication41;
+                import java.util.Scanner;
+      public class DoublyLinkedList {  
+  
+  
+  
+       class Node{  
         int data;  
         Node previous;  
-        Node next;  
+     
+     Node next;  
         Node head;
         public Node(int data) {  
             this.data = data;  
@@ -22,11 +26,12 @@ public class DoublyLinkedList {
     Node head, tail = null;  
     public void addNode(int data) {  
         Node newNode = new Node(data);  
-        if(head == null) {  
+     
+     if(head == null) {  
             head = tail = newNode;  
             head.previous = null;  
-            tail.next = null;  
-        }  
+            tail.next = null; 
+     }  
         else {  
             tail.next = newNode;  
             newNode.previous = tail;  
@@ -35,7 +40,9 @@ public class DoublyLinkedList {
         }  
     }  
     public void display() {  
-        Node current = head;  
+     
+     
+     Node current = head;  
         if(head == null) {  
             System.out.println("List is empty");  
             return;  
@@ -48,20 +55,23 @@ public class DoublyLinkedList {
     }
     public void searchNode( int value) {  
         int i = 1;  
-        boolean saif = false;  
-        Node current = head;  
+        boolean saif = false; 
+     Node current = head;  
         if(head == null) {  
             System.out.println("List is empty");  
             return;  
-        }  
-        while(current != null) {   
+        } 
+      while(current != null) {   
             if(current.data == value) {  
                 saif = true;  
                 System.out.println("True");  
             }
                 else
                  System.out.println("False");  
-                break;  }}   
+                break; 
+                
+                
+                }}   
      
     public void sortList() {  
         Node current = null, index = null;  
