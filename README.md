@@ -10,13 +10,9 @@ doubly-linked list Write a menu-driven program to do the following operation in 
        package javaapplication41;
                 import java.util.Scanner;
       public class DoublyLinkedList {  
-  
-  
-  
        class Node{  
         int data;  
         Node previous;  
-     
      Node next;  
         Node head;
         public Node(int data) {  
@@ -26,7 +22,6 @@ doubly-linked list Write a menu-driven program to do the following operation in 
     Node head, tail = null;  
     public void addNode(int data) {  
         Node newNode = new Node(data);  
-     
      if(head == null) {  
             head = tail = newNode;  
             head.previous = null;  
@@ -39,9 +34,7 @@ doubly-linked list Write a menu-driven program to do the following operation in 
             tail.next = null;  
         }  
     }  
-    public void display() {  
-     
-     
+    public void display() {    
      Node current = head;  
         if(head == null) {  
             System.out.println("List is empty");  
@@ -68,11 +61,8 @@ doubly-linked list Write a menu-driven program to do the following operation in 
             }
                 else
                  System.out.println("False");  
-                break; 
-                
-                
-                }}   
-     
+                break;        
+                }}  
     public void sortList() {  
         Node current = null, index = null;  
         int temp;  
@@ -92,9 +82,7 @@ doubly-linked list Write a menu-driven program to do the following operation in 
              }
         else {    
             Node current = head;  
-  
               int pos =n;  
-  
             for(int i = 1; i < pos; i++){  
                 current = current.next;  
             }  
@@ -111,7 +99,6 @@ doubly-linked list Write a menu-driven program to do the following operation in 
              current = null;  
         }  
     }  
-  
     public static void main(String[] args) {  
         Node head = null; 
     
@@ -120,8 +107,7 @@ doubly-linked list Write a menu-driven program to do the following operation in 
          System.out.println("Welcome dear");          
         char ch;
         do
-        {
-            
+        {   
             System.out.println("NOTE !! all elemments will be SORTED");
             System.out.println("just choose the number of the operation you want to apply");
             System.out.println("\nDoubly Linked List Operations\n");
@@ -148,15 +134,12 @@ doubly-linked list Write a menu-driven program to do the following operation in 
                  case 4:   
                 System.out.println("This is The Doubly linked list you made");
                 saif1.display();    
-                break;
-                 
+                break;  
               }
                saif1.sortList();
                System.out.println("\nDo you want to continue (Type y or n) \n");
-               ch = scan.next().charAt(0);    
- 
-        } while (ch == 'Y'|| ch == 'y' ); 
-     
+               ch = scan.next().charAt(0);   
+        } while (ch == 'Y'|| ch == 'y' );
         
-    }  
-}
+      }  
+     }
